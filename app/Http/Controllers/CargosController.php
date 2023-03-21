@@ -10,6 +10,6 @@ class CargosController extends Controller
 {
     public function index(){
         $cargos = Cargo::all();
-        return view('cargo.index', compact('cargos'))
+        return view('cargo.index', compact('cargos'));
     }
 }
