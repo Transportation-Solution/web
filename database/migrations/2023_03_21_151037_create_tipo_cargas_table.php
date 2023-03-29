@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('tipo_cargas', function (Blueprint $table) {
             $table->id();
             $table->string('nombre',45);
-            $table->double('peso',2,10);
+            $table->double('peso',2,1);
             $table->string('tipo', 70);
             $table->integer('valor_flete');
             $table->integer('valor_seguro');
