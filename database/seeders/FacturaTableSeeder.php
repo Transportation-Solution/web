@@ -18,14 +18,6 @@ class FacturaTableSeeder extends Seeder
                 'fecha' =>            '2021-05-25',
                 'id_registro_viaje' =>'1'
             ],
-            [
-                'fecha' =>            '2021-06-25',
-                'id_registro_viaje' =>'2'
-            ],
-            [
-                'fecha' =>            '2021-06-25',
-                'id_registro_viaje' =>'3'
-            ],
         ];
         foreach($facturas as $factura){
             Factura::create([

@@ -21,22 +21,6 @@ class Viaticos_conductorTableSeeder extends Seeder
                 'evidencia' =>          'NULL',
                 'tipo' =>               'Tipo1',
                 'id_registro_viaje' =>  '1'
-            ],
-            [
-                'nombre' =>             'NombreGenerico2',
-                'costo' =>              '502000',
-                'fecha' =>              '2013-03-28',  
-                'evidencia' =>          'NULL',
-                'tipo' =>               'Tipo2',
-                'id_registro_viaje' =>  '2'
-            ],
-            [
-                'nombre' =>             'NombreGenerico3',
-                'costo' =>              '1250000',
-                'fecha' =>              '2003-03-27',  
-                'evidencia' =>          'NULL',
-                'tipo' =>               'Tipo3',
-                'id_registro_viaje' =>  '3'
             ]
         ];
         foreach($viaticos_conductor as $viatico_conductor){

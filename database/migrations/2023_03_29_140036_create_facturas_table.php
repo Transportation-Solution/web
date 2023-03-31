@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('facturas', function (Blueprint $table) {
             $table->id();
             $table->date('fecha');
-            $table->bigInteger('id_registro_viaje')->unsigned;
+            $table->bigInteger('id_registro_viaje')->unsigned();
             $table->timestamps();
         });
     }

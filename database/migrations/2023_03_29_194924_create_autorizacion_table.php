@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('_autorizacion', function (Blueprint $table) {
+        Schema::create('autorizacion', function (Blueprint $table) {
             $table->id();
             $table->date('fecha');
             $table->integer('valor_compra');
