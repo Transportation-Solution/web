@@ -12,4 +12,7 @@ class Tipo_documentoController extends Controller
         $tipo_documentos=Tipo_Documento::all();
         return view('tipo_documentos.index', compact('tipo_documentos'));
     }
+    public function create(){
+        return view('tipo_documentos.create');
+    }
 }
