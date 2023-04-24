@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tipo_Carga;
 
-class Tipo_cargaController extends Controller
+class Tipo_cargasController extends Controller
 {
     public function index(){
         $tipo_cargas=Tipo_Carga::all();

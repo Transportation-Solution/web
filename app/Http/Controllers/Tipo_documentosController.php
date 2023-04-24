@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Tipo_Documento;
 
-class Tipo_documentoController extends Controller
+class Tipo_documentosController extends Controller
 {
     public function index(){
         $tipo_documentos=Tipo_Documento::all();
