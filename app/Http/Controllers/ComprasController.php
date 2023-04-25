@@ -17,12 +17,12 @@ class ComprasController extends Controller
     }
     public function store(Request $request){
         Compra::create($request->all());
-        return redirect()->route('compras.index');
+        return redirect()->route('compras');
     }
     //Para borrar o eleminar
     public function delete($id){
         Compra::find($id)->delete();
-        return redirect()->route('compras.index');
+        return redirect()->route('compras');
     } 
     //Para mostrar mas detalles
     public function show($id){

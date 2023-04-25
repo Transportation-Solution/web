@@ -19,12 +19,12 @@ class DepartamentosController extends Controller
     }
     public function store(Request $request){
         Departamento::create($request->all());
-        return redirect()->route('departamentos.index');
+        return redirect()->route('departamentos');
     }
     //Para borrar o eleminar
     public function delete($id){
         Departamento::find($id)->delete();
-        return redirect()->route('departamentos.index');
+        return redirect()->route('departamentos');
     } 
     //Para mostrar mas detalles
     public function show($id){
@@ -38,7 +38,7 @@ class DepartamentosController extends Controller
     }
     public function update(Request $request, $id){
         $departamento = Departamento::find($id)->update($request->all());
-        return redirect()->route('departamento');
+        return redirect()->route('departamentos');
     }
 
 }

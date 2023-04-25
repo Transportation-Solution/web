@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartamentosController;
-use App\http\Controllers\ComprasController;
+use App\Http\Controllers\ComprasController;
+use App\Http\Controllers\AutorizacionesController;
+
+
 
 
 
@@ -36,4 +39,11 @@ Route::delete('compras/{id}', [ComprasController::class, 'delete'])->name('compr
 Route::get('compras/{id}', [ComprasController::class, 'show'])->name('compras.detalles');
 Route::get('compras/{id}/editar', [ComprasController::class, 'edit'])->name('compras.editar');
 Route::put('compras/{id}', [ComprasController::class, 'update'])->name('compras.actualizar');
-//Rutas 
+//Rutas autorizacion 
+Route::get('autorizaciones', [AutorizacionesController::class, 'index'])->name('Autorizaciones');
+Route::get('autorizaciones/crear', [AutorizacionesController::class, 'create'])->name('Autorizaciones.crear');
+Route::post('autorizaciones', [AutorizacionesController::class, 'store'])->name('Autorizaciones.guardar');
+Route::delete('autorizaciones/{id}', [AutorizacionesController::class, 'delete'])->name('Autorizaciones.eliminar');
+Route::get('autorizaciones/{id}', [AutorizacionesController::class, 'show'])->name('Autorizaciones.detalles');
+Route::get('autorizaciones/{id}/editar', [AutorizacionesController::class, 'edit'])->name('Autorizaciones.editar');
+Route::put('autorizaciones/{id}', [AutorizacionesController::class, 'update'])->name('Autorizaciones.actualizar');
