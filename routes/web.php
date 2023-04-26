@@ -5,7 +5,7 @@ use App\Http\Controllers\DepartamentosController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\AutorizacionesController;
 use App\Http\Controllers\MunicipiosController;
-use App\Models\Municipio;
+use App\Http\Controllers\VehiculosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,3 +53,11 @@ Route::delete('municipios/{id}', [MunicipiosController::class, 'delete'])->name(
 Route::get('municipios/{id}', [MunicipiosController::class, 'show'])->name('municipios.detalles');
 Route::get('municipios/{id}/editar', [MunicipiosController::class, 'edit'])->name('municipios.editar');
 Route::put('municipios/{id}', [MunicipiosController::class, 'update'])->name('municipios.actualizar');
+//Rutas Vehiculos
+Route::get('vehiculos', [VehiculosController::class, 'index'])->name('vehiculos');
+Route::get('vehiculos/crear', [VehiculosController::class, 'create'])->name('vehiculos.crear');
+Route::post('vehiculos', [VehiculosController::class, 'store'])->name('vehiculos.guardar');
+Route::delete('vehiculos/{id}', [VehiculosController::class, 'delete'])->name('vehiculos.eliminar');
+Route::get('vehiculos/{id}', [VehiculosController::class, 'show'])->name('vehiculos.detalles');
+Route::get('vehiculos/{id}/editar', [VehiculosController::class, 'edit'])->name('vehiculos.editar');
+Route::put('vehiculos/{id}', [VehiculosController::class, 'update'])->name('vehiculos.actualizar');
