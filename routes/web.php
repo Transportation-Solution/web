@@ -4,10 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartamentosController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\AutorizacionesController;
-
-
-
-
+use App\Http\Controllers\MunicipiosController;
+use App\Models\Municipio;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,3 +45,11 @@ Route::delete('autorizaciones/{id}', [AutorizacionesController::class, 'delete']
 Route::get('autorizaciones/{id}', [AutorizacionesController::class, 'show'])->name('Autorizaciones.detalles');
 Route::get('autorizaciones/{id}/editar', [AutorizacionesController::class, 'edit'])->name('Autorizaciones.editar');
 Route::put('autorizaciones/{id}', [AutorizacionesController::class, 'update'])->name('Autorizaciones.actualizar');
+//Rutas Municipios
+Route::get('municipios', [MunicipiosController::class, 'index'])->name('municipios');
+Route::get('municipios/crear', [MunicipiosController::class, 'create'])->name('municipios.crear');
+Route::post('municipios', [MunicipiosController::class, 'store'])->name('municipios.guardar');
+Route::delete('municipios/{id}', [MunicipiosController::class, 'delete'])->name('municipios.eliminar');
+Route::get('municipios/{id}', [MunicipiosController::class, 'show'])->name('municipios.detalles');
+Route::get('municipios/{id}/editar', [MunicipiosController::class, 'edit'])->name('municipios.editar');
+Route::put('municipios/{id}', [MunicipiosController::class, 'update'])->name('municipios.actualizar');
