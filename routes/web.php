@@ -4,8 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\DepartamentosController;
 use App\Http\Controllers\ComprasController;
 use App\Http\Controllers\AutorizacionesController;
+use App\Http\Controllers\FacturaController;
 use App\Http\Controllers\MunicipiosController;
+use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\VehiculosController;
+use App\Http\Controllers\registro_viajesController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -61,3 +65,27 @@ Route::delete('vehiculos/{id}', [VehiculosController::class, 'delete'])->name('v
 Route::get('vehiculos/{id}', [VehiculosController::class, 'show'])->name('vehiculos.detalles');
 Route::get('vehiculos/{id}/editar', [VehiculosController::class, 'edit'])->name('vehiculos.editar');
 Route::put('vehiculos/{id}', [VehiculosController::class, 'update'])->name('vehiculos.actualizar');
+//Rutas Facturas
+Route::get('facturas', [FacturaController::class, 'index'])->name('facturas');
+Route::get('facturas/crear', [FacturaController::class, 'create'])->name('facturas.crear');
+Route::post('facturas', [FacturaController::class, 'store'])->name('facturas.guardar');
+Route::delete('facturas/{id}', [FacturaController::class, 'delete'])->name('facturas.eliminar');
+Route::get('facturas/{id}', [FacturaController::class, 'show'])->name('facturas.detalles');
+Route::get('facturas/{id}/editar', [FacturaController::class, 'edit'])->name('facturas.editar');
+Route::put('facturas/{id}', [FacturaController::class, 'update'])->name('facturas.actualizar');
+//Rutas Proveedores
+Route::get('proveedores', [ProveedorController::class, 'index'])->name('proveedores');
+Route::get('proveedores/crear', [ProveedorController::class, 'create'])->name('proveedores.crear');
+Route::post('proveedores', [ProveedorController::class, 'store'])->name('proveedores.guardar');
+Route::delete('proveedores/{id}', [ProveedorController::class, 'delete'])->name('proveedores.eliminar');
+Route::get('proveedores/{id}', [ProveedorController::class, 'show'])->name('proveedores.detalles');
+Route::get('proveedores/{id}/editar', [ProveedorController::class, 'edit'])->name('proveedores.editar');
+Route::put('proveedores/{id}', [ProveedorController::class, 'update'])->name('proveedores.actualizar');
+//Rutas Registro_Viajes
+Route::get('registro_viajes', [Registro_viajesController::class, 'index'])->name('registro_viajes');
+Route::get('registro_viajes/crear', [Registro_viajesController::class, 'create'])->name('registro_viajes.crear');
+Route::post('registro_viajes', [Registro_viajesController::class, 'store'])->name('registro_viajes.guardar');
+Route::delete('registro_viajes/{id}', [Registro_viajesController::class, 'delete'])->name('registro_viajes.eliminar');
+Route::get('registro_viajes/{id}', [Registro_viajesController::class, 'show'])->name('registro_viajes.detalles');
+Route::get('registro_viajes/{id}', [Registro_viajesController::class, 'edit'])->name('registro_viajes.editar');
+Route::put('registro_viajes/{id}', [Registro_viajesController::class, 'update'])->name('registro_viajes.actualizar');
