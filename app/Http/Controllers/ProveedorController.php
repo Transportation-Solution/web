@@ -11,7 +11,7 @@ class ProveedorController extends Controller
     //Para visualizar los ya agragados a la base de datos
     public function index(){
         $proveedor=proveedor::all();
-        return view('proveedores.index', compact('proveedores'));
+        return view('proveedores.index', compact('proveedor'));
     }
     //Para crear o agregar
     public function create(){
@@ -29,12 +29,12 @@ class ProveedorController extends Controller
     //Para mostrar mas detalles
     public function show($id){
         $proveedor = Proveedor::find($id);
-        return view('proveedores.show', compact('proveedores'));
+        return view('proveedores.show', compact('proveedor'));
     }
     //Para editar y actualizar
     public function edit($id){
         $proveedor = Proveedor::find($id);
-        return view('proveedores.edit', compact('proveedores'));
+        return view('proveedores.edit', compact('proveedor'));
     }
     public function update(Request $request, $id){
         $proveedor = Proveedor::find($id)->update($request->all());

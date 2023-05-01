@@ -8,7 +8,7 @@ use App\Http\Controllers\FacturaController;
 use App\Http\Controllers\MunicipiosController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\VehiculosController;
-use App\Http\Controllers\registro_viajesController;
+use App\Http\Controllers\Registro_viajeController;
 
 
 /*

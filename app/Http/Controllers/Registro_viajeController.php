@@ -11,7 +11,7 @@ class registro_viajes extends Controller
     //Para visualizar los ya agragados a la base de datos
     public function index(){
         $registro_viaje=Registro_viaje::all();
-        return view('registro_viajes.index', compact('registro_viajes'));
+        return view('registro_viajes.index', compact('registro_viaje'));
     }
     //Para crear o agregar
     public function create(){
@@ -29,12 +29,12 @@ class registro_viajes extends Controller
     //Para mostrar mas detalles
     public function show($id){
         $registro_viaje = Registro_viaje::find($id);
-        return view('registro_viajes.show', compact('registro_viajes'));
+        return view('registro_viajes.show', compact('registro_viaje'));
     }
     //Para editar y actualizar
     public function edit($id){
         $registro_viaje = Registro_viaje::find($id);
-        return view('registro_viajes.edit', compact('registro_viajes'));
+        return view('registro_viajes.edit', compact('registro_viaje'));
     }
     public function update(Request $request, $id){
         $registro_viaje = Registro_viaje::find($id)->update($request->all());

@@ -12,7 +12,7 @@ class FacturaController extends Controller
     //Para visualizar los ya agragados a la base de datos
     public function index(){
         $factura=Factura::all();
-        return view('facturas.index', compact('facturas'));
+        return view('facturas.index', compact('factura'));
     }
     //Para crear o agregar
     public function create(){
@@ -30,12 +30,12 @@ class FacturaController extends Controller
     //Para mostrar mas detalles
     public function show($id){
         $factura=Factura::find($id);
-        return view('facturas.show', compact('facturas'));
+        return view('facturas.show', compact('factura'));
     }
     //Para editar y actualizar
     public function edit($id){
         $factura=Factura::find($id);
-        return view('facturas.edit', compact('facturas'));
+        return view('facturas.edit', compact('factura'));
     }
     public function update(Request $request, $id){
         $factura=Factura::find($id)->update($request->all());
