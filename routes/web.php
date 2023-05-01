@@ -10,6 +10,7 @@ use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\VehiculosController;
 use App\Http\Controllers\Registro_viajeController;
 use App\Http\Controllers\CargosController;
+use App\Http\Controllers\Tipo_cargasController;
 
 
 /*
@@ -98,3 +99,11 @@ Route::delete('cargos/{id}', [CargosController::class, 'delete'])->name('cargos.
 Route::get('cargos/{id}', [CargosController::class, 'show'])->name('cargos.detalles');
 Route::get('cargos/{id}/editar', [CargosController::class, 'edit'])->name('cargos.editar');
 Route::put('cargos/{id}', [CargosController::class, 'update'])->name('cargos.actualizar');
+//Rutas Tipo de Cargas
+Route::get('tipo_cargas', [Tipo_cargasController::class, 'index'])->name('tipo_cargas');
+Route::get('tipo_cargas/crear', [Tipo_cargasController::class, 'create'])->name('tipo_cargas.crear');
+Route::post('tipo_cargas', [Tipo_cargasController::class, 'store'])->name('tipo_cargas.guardar');
+Route::delete('tipo_cargas/{id}', [Tipo_cargasController::class, 'delete'])->name('tipos_cargas.eliminar');
+Route::get('tipo_cargas/{id}', [Tipo_cargasController::class, 'show'])->name('tipo_cargas.detalles');
+Route::get('tipo_cargas/{id}/editar', [Tipo_cargasController::class, 'edit'])->name('tipo_cargas.editar');
+Route::put('tipo_cargas/{id}', [Tipo_cargasController::class, 'update'])->name('tipo_cargas.actualizar');
