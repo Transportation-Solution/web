@@ -9,6 +9,7 @@ use App\Http\Controllers\MunicipiosController;
 use App\Http\Controllers\ProveedorController;
 use App\Http\Controllers\VehiculosController;
 use App\Http\Controllers\Registro_viajeController;
+use App\Http\Controllers\CargosController;
 
 
 /*
@@ -82,10 +83,18 @@ Route::get('proveedores/{id}', [ProveedorController::class, 'show'])->name('prov
 Route::get('proveedores/{id}/editar', [ProveedorController::class, 'edit'])->name('proveedores.editar');
 Route::put('proveedores/{id}', [ProveedorController::class, 'update'])->name('proveedores.actualizar');
 //Rutas Registro_Viajes
-Route::get('registro_viajes', [Registro_viajesController::class, 'index'])->name('registro_viajes');
-Route::get('registro_viajes/crear', [Registro_viajesController::class, 'create'])->name('registro_viajes.crear');
-Route::post('registro_viajes', [Registro_viajesController::class, 'store'])->name('registro_viajes.guardar');
-Route::delete('registro_viajes/{id}', [Registro_viajesController::class, 'delete'])->name('registro_viajes.eliminar');
-Route::get('registro_viajes/{id}', [Registro_viajesController::class, 'show'])->name('registro_viajes.detalles');
-Route::get('registro_viajes/{id}', [Registro_viajesController::class, 'edit'])->name('registro_viajes.editar');
-Route::put('registro_viajes/{id}', [Registro_viajesController::class, 'update'])->name('registro_viajes.actualizar');
+Route::get('registro_viajes', [Registro_viajeController::class, 'index'])->name('registro_viajes');
+Route::get('registro_viajes/crear', [Registro_viajeController::class, 'create'])->name('registro_viajes.crear');
+Route::post('registro_viajes', [Registro_viajeController::class, 'store'])->name('registro_viajes.guardar');
+Route::delete('registro_viajes/{id}', [Registro_viajeController::class, 'delete'])->name('registro_viajes.eliminar');
+Route::get('registro_viajes/{id}', [Registro_viajeController::class, 'show'])->name('registro_viajes.detalles');
+Route::get('registro_viajes/{id}/editar', [Registro_viajeController::class, 'edit'])->name('registro_viajes.editar');
+Route::put('registro_viajes/{id}', [Registro_viajeController::class, 'update'])->name('registro_viajes.actualizar');
+//Rutas Cargos
+Route::get('cargos', [CargosController::class, 'index'])->name('cargos');
+Route::get('cargos/crear', [CargosController::class, 'create'])->name('cargos.crear');
+Route::post('cargos', [CargosController::class, 'store'])->name('cargos.guardar');
+Route::delete('cargos/{id}', [CargosController::class, 'delete'])->name('cargos.eliminar');
+Route::get('cargos/{id}', [CargosController::class, 'show'])->name('cargos.detalles');
+Route::get('cargos/{id}/editar', [CargosController::class, 'edit'])->name('cargos.editar');
+Route::put('cargos/{id}', [CargosController::class, 'update'])->name('cargos.actualizar');
