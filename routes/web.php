@@ -11,6 +11,7 @@ use App\Http\Controllers\VehiculosController;
 use App\Http\Controllers\Registro_viajeController;
 use App\Http\Controllers\CargosController;
 use App\Http\Controllers\Tipo_cargasController;
+use App\Http\Controllers\Tipo_documentosController;
 
 
 /*
@@ -107,3 +108,11 @@ Route::delete('tipo_cargas/{id}', [Tipo_cargasController::class, 'delete'])->nam
 Route::get('tipo_cargas/{id}', [Tipo_cargasController::class, 'show'])->name('tipo_cargas.detalles');
 Route::get('tipo_cargas/{id}/editar', [Tipo_cargasController::class, 'edit'])->name('tipo_cargas.editar');
 Route::put('tipo_cargas/{id}', [Tipo_cargasController::class, 'update'])->name('tipo_cargas.actualizar');
+//Rutas Tipo de Documentos
+Route::get('tipo_documentos', [Tipo_documentosController::class, 'index'])->name('tipo_documentos');
+Route::get('tipo_documentos/crear', [Tipo_documentosController::class, 'create'])->name('tipo_documentos.crear');
+Route::post('tipo_documentos', [Tipo_documentosController::class, 'store'])->name('tipo_documentos.guardar');
+Route::delete('tipo_documentos/{id}', [Tipo_documentosController::class, 'delete'])->name('tipo_documentos.eliminar');
+Route::get('tipo_documentos/{id}', [Tipo_documentosController::class, 'show'])->name('tipo_documentos.detalles');
+Route::get('tipo_documentos/{id}/editar', [Tipo_documentosController::class, 'edit'])->name('tipo_documentos.editar');
+Route::put('tipo_documentos/{id}', [Tipo_documentosController::class, 'update'])->name('tipo_documentos.actualizar');
