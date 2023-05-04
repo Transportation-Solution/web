@@ -25,12 +25,12 @@ class Tipo_documentosController extends Controller
         return redirect()->route('tipo_documentos');
     }
     public function show($id){
-        $tipo_documentos=Tipo_Documento::find($id);
-        return view('tipo_documento.show', compact('tipo_documentos'));
+        $tipo_documento=Tipo_Documento::find($id);
+        return view('tipo_documento.show', compact('tipo_documento'));
     }
     public function edit($id){
-        $tipo_documentos=Tipo_Documento::find($id);
-        return view('tipo_documento.edit', compact('tipo_documentos'));
+        $tipo_documento=Tipo_Documento::find($id);
+        return view('tipo_documento.edit', compact('tipo_documento'));
     }
     public function update(Request $request, $id){
         $tipo_documentos=Tipo_Documento::find($id)->update($request->all());

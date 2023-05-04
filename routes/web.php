@@ -12,6 +12,7 @@ use App\Http\Controllers\Registro_viajeController;
 use App\Http\Controllers\CargosController;
 use App\Http\Controllers\Tipo_cargasController;
 use App\Http\Controllers\Tipo_documentosController;
+use App\Http\Controllers\Cotizacion_clientesController;
 
 
 /*
@@ -116,3 +117,11 @@ Route::delete('tipo_documentos/{id}', [Tipo_documentosController::class, 'delete
 Route::get('tipo_documentos/{id}', [Tipo_documentosController::class, 'show'])->name('tipo_documentos.detalles');
 Route::get('tipo_documentos/{id}/editar', [Tipo_documentosController::class, 'edit'])->name('tipo_documentos.editar');
 Route::put('tipo_documentos/{id}', [Tipo_documentosController::class, 'update'])->name('tipo_documentos.actualizar');
+//Rutas Contizacion de Clientes
+Route::get('cotizacion_clientes', [Cotizacion_clientesController::class, 'index'])->name('cotizacion_clientes');
+Route::get('cotizacion_clientes/crear', [Cotizacion_clientesController::class, 'create'])->name('cotizacion_clientes.crear');
+Route::post('cotizacion_clientes', [Cotizacion_clientesController::class, 'store'])->name('cotizacion_clientes.guardar');
+Route::delete('cotizacion_clientes/{id}', [Cotizacion_clientesController::class, 'delete'])->name('cotizacion_clientes.eliminar');
+Route::get('cotizacion_clientes/{id}', [Cotizacion_clientesController::class, 'show'])->name('cotizacion_clientes.detalles');
+Route::get('cotizacion_clientes/{id}/editar', [Cotizacion_clientesController::class, 'edit'])->name('cotizacion_clientes.editar');
+Route::put('cotizacion_clientes/{id}', [Cotizacion_clientesController::class, 'update'])->name('cotizacion_clientes.actualizar');
