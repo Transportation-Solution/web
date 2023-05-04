@@ -13,6 +13,7 @@ use App\Http\Controllers\CargosController;
 use App\Http\Controllers\Tipo_cargasController;
 use App\Http\Controllers\Tipo_documentosController;
 use App\Http\Controllers\Cotizacion_clientesController;
+use App\Http\Controllers\MantenimientosController;
 
 
 /*
@@ -125,3 +126,11 @@ Route::delete('cotizacion_clientes/{id}', [Cotizacion_clientesController::class,
 Route::get('cotizacion_clientes/{id}', [Cotizacion_clientesController::class, 'show'])->name('cotizacion_clientes.detalles');
 Route::get('cotizacion_clientes/{id}/editar', [Cotizacion_clientesController::class, 'edit'])->name('cotizacion_clientes.editar');
 Route::put('cotizacion_clientes/{id}', [Cotizacion_clientesController::class, 'update'])->name('cotizacion_clientes.actualizar');
+//Rutas Mantenimientos
+Route::get('mantenimientos', [MantenimientosController::class, 'index'])->name('mantenimientos');
+Route::get('mantenimientos/crear', [MantenimientosController::class, 'create'])->name('mantenimientos.crear');
+Route::post('mantenimientos', [MantenimientosController::class, 'store'])->name('mantenimientos.guardar');
+Route::delete('mantenimientos/{id}', [MantenimientosController::class, 'delete'])->name('mantenimientos.eliminar');
+Route::get('mantenimientos/{id}', [MantenimientosController::class, 'show'])->name('mantenimientos.detalles');
+Route::get('mantenimientos/{id}/editar', [MantenimientosController::class, 'edit'])->name('mantenimientos.editar');
+Route::put('mantenimientos/{id}', [MantenimientosController::class, 'update'])->name('mantenimientos.actualizar');
