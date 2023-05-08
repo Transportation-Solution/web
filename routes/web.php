@@ -14,6 +14,7 @@ use App\Http\Controllers\Tipo_cargasController;
 use App\Http\Controllers\Tipo_documentosController;
 use App\Http\Controllers\Cotizacion_clientesController;
 use App\Http\Controllers\MantenimientosController;
+use App\Http\Controllers\Orden_comprasController;
 
 
 /*
@@ -134,3 +135,11 @@ Route::delete('mantenimientos/{id}', [MantenimientosController::class, 'delete']
 Route::get('mantenimientos/{id}', [MantenimientosController::class, 'show'])->name('mantenimientos.detalles');
 Route::get('mantenimientos/{id}/editar', [MantenimientosController::class, 'edit'])->name('mantenimientos.editar');
 Route::put('mantenimientos/{id}', [MantenimientosController::class, 'update'])->name('mantenimientos.actualizar');
+//Ruitas Orden de compras
+Route::get('orden_compras', [Orden_comprasController::class, 'index'])->name('orden_compras');
+Route::get('orden_compras/crear', [Orden_comprasController::class, 'create'])->name('orden_compras.crear');
+Route::post('orden_compras', [Orden_comprasController::class, 'store'])->name('orden_compras.guardar');
+Route::delete('orden_compras/{id}', [Orden_comprasController::class, 'delete'])->name('orden_compras.eliminar');
+Route::get('orden_compras/{id}', [Orden_comprasController::class, 'show'])->name('orden_compras.detalles');
+Route::get('orden_compras/{id}/editar', [Orden_comprasController::class, 'edit'])->name('orden_compras.editar');
+Route::put('orden_compras/{id}', [Orden_comprasController::class, 'update'])->name('orden_compras.actualizar');
