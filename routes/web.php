@@ -16,6 +16,7 @@ use App\Http\Controllers\Cotizacion_clientesController;
 use App\Http\Controllers\MantenimientosController;
 use App\Http\Controllers\Orden_comprasController;
 use App\Http\Controllers\UsuariosController;
+use App\Http\Controllers\Viatico_conductoresController;
 
 
 /*
@@ -152,3 +153,11 @@ Route::delete('usuarios/{id}', [UsuariosController::class, 'delete'])->name('usu
 Route::get('usuarios/{id}', [UsuariosController::class, 'show'])->name('usuarios.detalles');
 Route::get('usuarios/{id}/editar', [UsuariosController::class, 'edit'])->name('usuarios.editar');
 Route::put('usuarios/{id}', [UsuariosController::class, 'update'])->name('usuarios.actualizar');
+//Rutas Viaticos del conductor
+Route::get('viatico_conductores', [Viatico_conductoresController::class, 'index'])->name('viatico_conductores');
+Route::get('viatico_conductores/crear', [Viatico_conductoresController::class, 'create'])->name('viatico_conductores.crear');
+Route::post('viatico_conductores', [Viatico_conductoresController::class, 'store'])->name('viatico_conductores.guardar');
+Route::delete('viatico_conductores/{id}', [Viatico_conductoresController::class, 'delete'])->name('viatico_conductores.eliminar');
+Route::get('viatico_conductores/{id}', [Viatico_conductoresController::class, 'show'])->name('viatico_conductores.detalles');
+Route::get('viatico_conductores/{id}/editar', [Viatico_conductoresController::class, 'edit'])->name('viatico_conductores.editar');
+Route::put('viatico_conductores/{id}', [Viatico_conductoresController::class, 'update'])->name('viatico_conductores.actualizar');
