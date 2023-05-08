@@ -15,6 +15,7 @@ use App\Http\Controllers\Tipo_documentosController;
 use App\Http\Controllers\Cotizacion_clientesController;
 use App\Http\Controllers\MantenimientosController;
 use App\Http\Controllers\Orden_comprasController;
+use App\Http\Controllers\UsuariosController;
 
 
 /*
@@ -135,7 +136,7 @@ Route::delete('mantenimientos/{id}', [MantenimientosController::class, 'delete']
 Route::get('mantenimientos/{id}', [MantenimientosController::class, 'show'])->name('mantenimientos.detalles');
 Route::get('mantenimientos/{id}/editar', [MantenimientosController::class, 'edit'])->name('mantenimientos.editar');
 Route::put('mantenimientos/{id}', [MantenimientosController::class, 'update'])->name('mantenimientos.actualizar');
-//Ruitas Orden de compras
+//Rutas Orden de compras
 Route::get('orden_compras', [Orden_comprasController::class, 'index'])->name('orden_compras');
 Route::get('orden_compras/crear', [Orden_comprasController::class, 'create'])->name('orden_compras.crear');
 Route::post('orden_compras', [Orden_comprasController::class, 'store'])->name('orden_compras.guardar');
@@ -143,3 +144,11 @@ Route::delete('orden_compras/{id}', [Orden_comprasController::class, 'delete'])-
 Route::get('orden_compras/{id}', [Orden_comprasController::class, 'show'])->name('orden_compras.detalles');
 Route::get('orden_compras/{id}/editar', [Orden_comprasController::class, 'edit'])->name('orden_compras.editar');
 Route::put('orden_compras/{id}', [Orden_comprasController::class, 'update'])->name('orden_compras.actualizar');
+//Rutas usuarios
+Route::get('usuarios', [UsuariosController::class, 'index'])->name('usuarios');
+Route::get('usuarios/crear', [UsuariosController::class, 'create'])->name('usuarios.crear');
+Route::post('usuarios', [UsuariosController::class, 'store'])->name('usuarios.guardar');
+Route::delete('usuarios/{id}', [UsuariosController::class, 'delete'])->name('usuarios.eliminar');
+Route::get('usuarios/{id}', [UsuariosController::class, 'show'])->name('usuarios.detalles');
+Route::get('usuarios/{id}/editar', [UsuariosController::class, 'edit'])->name('usuarios.editar');
+Route::put('usuarios/{id}', [UsuariosController::class, 'update'])->name('usuarios.actualizar');

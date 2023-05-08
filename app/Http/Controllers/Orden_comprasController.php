@@ -24,12 +24,12 @@ class Orden_comprasController extends Controller
         return redirect()->route('orden_compras');
     }
     public function show($id){
-        $orden_compras=Orden_compra::find($id);
-        return view('orden_compra.show', compact('orden_compras'));
+        $orden_compra=Orden_compra::find($id);
+        return view('orden_compra.show', compact('orden_compra'));
     }
     public function edit($id){
-        $orden_compras=Orden_compra::find($id);
-        return view('orden_compra.edit', compact('orden_compras'));
+        $orden_compra=Orden_compra::find($id);
+        return view('orden_compra.edit', compact('orden_compra'));
     }
     public function update(Request $request, $id){
         $orden_compras=Orden_compra::find($id)->update($request->all());
