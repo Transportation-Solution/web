@@ -161,3 +161,12 @@ Route::delete('viatico_conductores/{id}', [Viatico_conductoresController::class,
 Route::get('viatico_conductores/{id}', [Viatico_conductoresController::class, 'show'])->name('viatico_conductores.detalles');
 Route::get('viatico_conductores/{id}/editar', [Viatico_conductoresController::class, 'edit'])->name('viatico_conductores.editar');
 Route::put('viatico_conductores/{id}', [Viatico_conductoresController::class, 'update'])->name('viatico_conductores.actualizar');
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified'
+])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
+});
