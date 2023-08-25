@@ -9,8 +9,8 @@ use App\Models\Cargo;
 class CargosController extends Controller
 {
     public function index(){
-        $cargo = Cargo::all();
-        return view('cargo.index', compact('cargo'));
+        $cargos = Cargo::all();
+        return view('cargo.index', compact('cargos'));
     }
     public function create(){
         return view('cargo.create');
@@ -24,12 +24,12 @@ class CargosController extends Controller
         return redirect()->route('cargos');
     } 
     public function show($id){
-        $cargo = Cargo::find($id);
-        return view('cargo.show', compact('cargo'));
+        $cargos = Cargo::find($id);
+        return view('cargo.show', compact('cargos'));
     }
     public function edit($id){
-        $cargo = Cargo::find($id);
-        return view('cargo.edit', compact('cargo'));
+        $cargos = Cargo::find($id);
+        return view('cargo.edit', compact('cargos'));
     }
     public function update(Request $request, $id){
         $cargo = Cargo::find($id)->update($request->all());

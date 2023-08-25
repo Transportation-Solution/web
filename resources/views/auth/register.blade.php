@@ -38,47 +38,33 @@
 
                 <div class="my-auto">
                     <!-- title-->
-                    <h4 class="mt-3">Free Sign Up</h4>
-                    <p class="text-muted mb-4">Don't have an account? Create your account, it takes less than a minute</p>
+                    <h4 class="mt-3">Inicio de sesion</h4>
+                    <p class="text-muted mb-4">No tienes una cuenta? Crea tu propia cuenta, solo te tomara un minuto</p>
 
                     <!-- form -->
-                    <form action="#">
+                    <form action="{{route('register')}}" method="POST">
+                        @csrf
                         <div class="mb-3">
-                            <label for="fullname" class="form-label">Full Name</label>
-                            <input class="form-control" type="text" id="fullname" placeholder="Enter your name" required>
+                            <label for="fullname" class="form-label">Nombre completo</label>
+                            <input class="form-control" type="text" id="fullname" name="name" placeholder="Ingrese su nombre" required>
                         </div>
                         <div class="mb-3">
-                            <label for="emailaddress" class="form-label">Email address</label>
-                            <input class="form-control" type="email" id="emailaddress" required placeholder="Enter your email">
+                            <label for="emailaddress" class="form-label">Correo electronico</label>
+                            <input class="form-control" type="email" id="emailaddress" required  name="email" placeholder="Ingrese su correo">
                         </div>
                         <div class="mb-3">
-                            <label for="password" class="form-label">Password</label>
-                            <input class="form-control" type="password" required id="password" placeholder="Enter your password">
-                        </div>
-                        <div class="mb-3">
-                            <div class="form-check">
-                                <input type="checkbox" class="form-check-input" id="checkbox-signup">
-                                <label class="form-check-label" for="checkbox-signup">I accept <a href="javascript: void(0);" class="text-muted">Terms and Conditions</a></label>
-                            </div>
+                            <label for="password" class="form-label">Contraseña</label>
+                            <input class="form-control" type="password" required id="password" name="password" placeholder="Ingrese su contraseña">
                         </div>
                         <div class="mb-0 d-grid text-center">
-                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-account-circle"></i> Sign Up </button>
+                            <button class="btn btn-primary" type="submit"><i class="mdi mdi-account-circle"></i>Iniciar sesion </button>
                         </div>
                         <!-- social-->
                         <div class="text-center mt-4">
-                            <p class="text-muted font-16">Sign up using</p>
+                            <p class="text-muted font-16">Inicia sesion usando: </p>
                             <ul class="social-list list-inline mt-3">
                                 <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="social-list-item border-primary text-primary"><i class="mdi mdi-facebook"></i></a>
-                                </li>
-                                <li class="list-inline-item">
                                     <a href="javascript: void(0);" class="social-list-item border-danger text-danger"><i class="mdi mdi-google"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="social-list-item border-info text-info"><i class="mdi mdi-twitter"></i></a>
-                                </li>
-                                <li class="list-inline-item">
-                                    <a href="javascript: void(0);" class="social-list-item border-secondary text-secondary"><i class="mdi mdi-github"></i></a>
                                 </li>
                             </ul>
                         </div>
@@ -88,25 +74,11 @@
 
                 <!-- Footer-->
                 <footer class="footer footer-alt">
-                    <p class="text-muted">Already have account? <a href="pages-login-2.html" class="text-muted ms-1"><b>Log In</b></a></p>
+                    <p class="text-muted">Ya tienes una cuenta? <a href="pages-login-2.html" class="text-muted ms-1"><b>Iniciar sesion</b></a></p>
                 </footer>
 
-            </div> <!-- end .card-body -->
+            </div> 
         </div>
-        <!-- end auth-fluid-form-box-->
-
-        <!-- Auth fluid right content -->
-        <div class="auth-fluid-right text-center">
-            <div class="auth-user-testimonial">
-                <h2 class="mb-3">I love the color!</h2>
-                <p class="lead"><i class="mdi mdi-format-quote-open"></i> It's a elegent templete. I love it very much! . <i class="mdi mdi-format-quote-close"></i>
-                </p>
-                <p>
-                    - Hyper Admin User
-                </p>
-            </div> <!-- end auth-user-testimonial-->
-        </div>
-        <!-- end Auth fluid right content -->
     </div>
     <!-- end auth-fluid-->
      <!-- Vendor js -->

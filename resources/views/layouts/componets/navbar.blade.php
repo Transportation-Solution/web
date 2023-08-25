@@ -4,15 +4,6 @@
 
             <!-- Topbar Brand Logo -->
             <div class="logo-topbar">
-                <!-- Logo light -->
-                <a href="index.html" class="logo-light">
-                    <span class="logo-lg">
-                        <img src="" alt="logo">
-                    </span>
-                    <span class="logo-sm">
-                        <img src="" alt="small logo">
-                    </span>
-                </a>
 
                 <!-- Logo Dark -->
                 <a href="index.html" class="logo-dark">
@@ -66,11 +57,11 @@
                     <div class="p-2 border-top-0 border-start-0 border-end-0 border-dashed border">
                         <div class="row align-items-center">
                             <div class="col">
-                                <h6 class="m-0 font-16 fw-semibold"> Notification</h6>
+                                <h6 class="m-0 font-16 fw-semibold"> Notificacion</h6>
                             </div>
                             <div class="col-auto">
                                 <a href="javascript: void(0);" class="text-dark text-decoration-underline">
-                                    <small>Clear All</small>
+                                    <small>Limpiar todo</small>
                                 </a>
                             </div>
                         </div>
@@ -109,14 +100,14 @@
                                         </div>
                                     </div>
                                     <div class="flex-grow-1 text-truncate ms-2">
-                                        <h5 class="noti-item-title fw-semibold font-14">Admin <small class="fw-normal text-muted ms-1">1 hours ago</small></h5>
-                                        <small class="noti-item-subtitle text-muted">New user registered</small>
+                                        <h5 class="noti-item-title fw-semibold font-14">Admin <small class="fw-normal text-muted ms-1">hace 1 hora</small></h5>
+                                        <small class="noti-item-subtitle text-muted">Nuevo usuario registrado</small>
                                     </div>
                                 </div>
                             </div>
                         </a>
 
-                        <h5 class="text-muted font-13 fw-normal mt-0">Yesterday</h5>
+                        <h5 class="text-muted font-13 fw-normal mt-0">Ayer</h5>
 
                         <!-- item-->
                         <a href="javascript:void(0);" class="dropdown-item p-0 notify-item card read-noti shadow-none mb-2">
@@ -181,7 +172,7 @@
 
                     <!-- All-->
                     <a href="javascript:void(0);" class="dropdown-item text-center text-primary notify-item border-top border-light py-2">
-                        View All
+                        Ver todo
                     </a>
 
                 </div>
@@ -193,13 +184,6 @@
                     <i class="ri-settings-3-line font-22"></i>
                 </a>
             </li>
-
-            <li class="d-none d-sm-inline-block">
-                <div class="nav-link" id="light-dark-mode" data-bs-toggle="tooltip" data-bs-placement="left" title="Theme Mode">
-                    <i class="ri-moon-line font-22"></i>
-                </div>
-            </li>
-
 
             <li class="d-none d-md-inline-block">
                 <a class="nav-link" href="" data-toggle="fullscreen">
@@ -213,45 +197,46 @@
                         <img src="assets/images/users/avatar-1.jpg" alt="user-image" width="32" class="rounded-circle">
                     </span>
                     <span class="d-lg-flex flex-column gap-1 d-none">
-                        <h5 class="my-0">Dominic Keller</h5>
-                        <h6 class="my-0 fw-normal">Founder</h6>
+                        <h5 class="my-0">{{Auth::user()->name}}</h5>
+                        <h6 class="my-0 fw-normal">Admin</h6>
                     </span>
                 </a>
                 <div class="dropdown-menu dropdown-menu-end dropdown-menu-animated profile-dropdown">
                     <!-- item-->
                     <div class=" dropdown-header noti-title">
-                        <h6 class="text-overflow m-0">Welcome !</h6>
+                        <h6 class="text-overflow m-0">Bienvenido!</h6>
                     </div>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item">
                         <i class="mdi mdi-account-circle me-1"></i>
-                        <span>My Account</span>
+                        <span>Mi cuenta</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item">
                         <i class="mdi mdi-account-edit me-1"></i>
-                        <span>Settings</span>
+                        <span>Opciones</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item">
                         <i class="mdi mdi-lifebuoy me-1"></i>
-                        <span>Support</span>
+                        <span>Soporte</span>
                     </a>
 
                     <!-- item-->
                     <a href="javascript:void(0);" class="dropdown-item">
                         <i class="mdi mdi-lock-outline me-1"></i>
-                        <span>Lock Screen</span>
+                        <span>Bloquear pantalla</span>
                     </a>
-
-                    <!-- item-->
-                    <a href="javascript:void(0);" class="dropdown-item">
-                        <i class="mdi mdi-logout me-1"></i>
-                        <span>Logout</span>
-                    </a>
+                    <form action="/" method="POST" id="form-logout">
+                        @csrf
+                        <a href="{{route('logout')}}" class="dropdown-item" onclick="document.getElementById(form-logout).submit()">
+                                <i class="mdi mdi-logout me-1"></i>
+                                Cerrar sesion
+                        </a>
+                    </form>
                 </div>
             </li>
         </ul>

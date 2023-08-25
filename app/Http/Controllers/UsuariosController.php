@@ -33,5 +33,6 @@ class UsuariosController extends Controller
     }
     public function update(Request $request, $id){
         $usuarios=Usuario::find($id)->update($request->all());
+        return redirect()->route('usuarios');
     }
 }

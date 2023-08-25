@@ -10,8 +10,8 @@ class registro_viajes extends Controller
 {
     //Para visualizar los ya agragados a la base de datos
     public function index(){
-        $registro_viaje=Registro_viaje::all();
-        return view('registro_viajes.index', compact('registro_viaje'));
+        $registros_viaje=Registro_viaje::all();
+        return view('registro_viajes.index', compact('registros_viaje'));
     }
     //Para crear o agregar
     public function create(){
