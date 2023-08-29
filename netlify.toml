@@ -1,2 +1,2 @@
 [build]
-  base = "artisan"
+  base = "'/vendor/autoload.php'"
