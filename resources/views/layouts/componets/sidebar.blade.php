@@ -63,6 +63,11 @@
                             <a href="{{route('usuarios')}}">Usuarios</a>
                         </li>
                     </ul>
+                    <ul class="side-nav-second-level">
+                        <li>
+                            <a href="{{route('usuarios.crear')}}">Crear Usuario</a>
+                        </li>
+                    </ul>
                 </div>
                 
             </li> 
