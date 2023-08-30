@@ -35,24 +35,25 @@
         <!-- Leftbar User -->
         <div class="leftbar-user">
             <a href="pages-profile.html">
-                <img src="{{('img/profile.jpg')}}" alt="user-image" height="42" class="rounded-circle shadow-sm">
-                <span class="leftbar-user-name mt-2">{{Auth::user()->name}}</span>
+                <img src="{{ 'img/profile.jpg' }}" alt="user-image" height="42" class="rounded-circle shadow-sm">
+                <span class="leftbar-user-name mt-2">{{ Auth::user()->name }}</span>
             </a>
         </div>
 
         <!--- Sidemenu -->
         <ul class="side-nav">
-          <!--- titulo descripcion-->
-            <li class="side-nav-title">Navegación</li>       
+            <!--- titulo descripcion-->
+            <li class="side-nav-title">Navegación</li>
             <li class="side-nav-item">
                 <a href="apps-calendar.html" class="side-nav-link">
                     <i class="uil-calender"></i>
                     <span> Calendario </span>
                 </a>
-            </li>           
+            </li>
 
             <li class="side-nav-item">
-                <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false" aria-controls="sidebarEcommerce" class="side-nav-link">
+                <a data-bs-toggle="collapse" href="#sidebarEcommerce" aria-expanded="false"
+                    aria-controls="sidebarEcommerce" class="side-nav-link">
                     <i class="uil-user"></i>
                     <span>Usuarios</span>
                     <span class="menu-arrow"></span>
@@ -60,65 +61,95 @@
                 <div class="collapse" id="sidebarEcommerce">
                     <ul class="side-nav-second-level">
                         <li>
-                            <a href="{{route('usuarios')}}">Usuarios</a>
+                            <a href="{{ route('usuarios') }}">Usuarios</a>
                         </li>
                     </ul>
                 </div>
-                
-            </li> 
+
+            </li>
             <li class="side-nav-item">
-                <a href="{{route('cargos')}}"  class="side-nav-link">
+                <a href="{{ route('cargos') }}" class="side-nav-link">
                     <i class="uil-users-alt"></i>
                     <span>Cargos</span>
                 </a>
-            </li> 
+            </li>
             <li class="side-nav-item">
-                <a href="{{route('vehiculos')}}"  class="side-nav-link">
-                 <i class="bi bi-bus-front"></i>
+                <a href="{{ route('vehiculos') }}" class="side-nav-link">
+                    <i class="bi bi-bus-front"></i>
                     <span>Vehiculos</span>
                 </a>
-            </li> 
+            </li>
             <li class="side-nav-item">
-                <a href="{{route('Autorizaciones')}}"  class="side-nav-link">
-                <i class="bi bi-journal-bookmark"></i>
+                <a href="{{ route('Autorizaciones') }}" class="side-nav-link">
+                    <i class="bi bi-journal-bookmark"></i>
                     <span>Autorizaciones</span>
                 </a>
-            </li> 
+            </li>
             <li class="side-nav-item">
-                <a href="{{route('tipo_cargas')}}"  class="side-nav-link">
-                  <i class="bi bi-wallet2"></i>
+                <a href="{{ route('tipo_cargas') }}" class="side-nav-link">
+                    <i class="bi bi-wallet2"></i>
                     <span>Tipo de carga</span>
                 </a>
-            </li> 
+            </li>
             <li class="side-nav-item">
-                <a href="{{route('viatico_conductores')}}"  class="side-nav-link">
-                <i class="bi bi-geo-alt"></i>
+                <a href="{{ route('viatico_conductores') }}" class="side-nav-link">
+                    <i class="bi bi-geo-alt"></i>
                     <span>Viaticos conductores</span>
                 </a>
-            </li> 
+            </li>
             <li class="side-nav-item">
-                <a href="{{route('municipios')}}"  class="side-nav-link">
-                <i class="bi bi-geo-alt"></i>
+                <a href="{{ route('municipios') }}" class="side-nav-link">
+                    <i class="bi bi-geo-alt"></i>
                     <span>Municipios</span>
                 </a>
-            </li> 
-            
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route('compras') }}" class="side-nav-link">
+                    <i class="uil-users-alt"></i>
+                    <span>Compras</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route('departamentos') }}" class="side-nav-link">
+                    <i class="uil-users-alt"></i>
+                    <span>Departamentos</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route('facturas') }}" class="side-nav-link">
+                    <i class="uil-users-alt"></i>
+                    <span>Facturas</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route('mantenimientos') }}" class="side-nav-link">
+                    <i class="uil-users-alt"></i>
+                    <span>Mantenimientos</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route('registro_viajes') }}" class="side-nav-link">
+                    <i class="uil-users-alt"></i>
+                    <span>Registre viajes</span>
+                </a>
+            </li>
 
-         
-
-           
-
-           
-
-     
 
 
 
-        
+
+
+
+
+
+
+
+
+
 
 
             <!-- Help Box -->
-            
+
             <!-- end Help Box -->
 
 
