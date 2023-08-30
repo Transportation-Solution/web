@@ -35,7 +35,7 @@
         <!-- Leftbar User -->
         <div class="leftbar-user">
             <a href="pages-profile.html">
-                <img src="assets/images/users/avatar-1.jpg" alt="user-image" height="42" class="rounded-circle shadow-sm">
+                <img src="{{('img/profile.jpg')}}" alt="user-image" height="42" class="rounded-circle shadow-sm">
                 <span class="leftbar-user-name mt-2">{{Auth::user()->name}}</span>
             </a>
         </div>
@@ -63,11 +63,6 @@
                             <a href="{{route('usuarios')}}">Usuarios</a>
                         </li>
                     </ul>
-                    <ul class="side-nav-second-level">
-                        <li>
-                            <a href="{{route('usuarios.crear')}}">Crear Usuario</a>
-                        </li>
-                    </ul>
                 </div>
                 
             </li> 
@@ -77,6 +72,37 @@
                     <span>Cargos</span>
                 </a>
             </li> 
+            <li class="side-nav-item">
+                <a href="{{route('vehiculos')}}"  class="side-nav-link">
+                 <i class="bi bi-bus-front"></i>
+                    <span>Vehiculos</span>
+                </a>
+            </li> 
+            <li class="side-nav-item">
+                <a href="{{route('Autorizaciones')}}"  class="side-nav-link">
+                <i class="bi bi-journal-bookmark"></i>
+                    <span>Autorizaciones</span>
+                </a>
+            </li> 
+            <li class="side-nav-item">
+                <a href="{{route('tipo_cargas')}}"  class="side-nav-link">
+                  <i class="bi bi-wallet2"></i>
+                    <span>Tipo de carga</span>
+                </a>
+            </li> 
+            <li class="side-nav-item">
+                <a href="{{route('viatico_conductores')}}"  class="side-nav-link">
+                <i class="bi bi-geo-alt"></i>
+                    <span>Viaticos conductores</span>
+                </a>
+            </li> 
+            <li class="side-nav-item">
+                <a href="{{route('municipios')}}"  class="side-nav-link">
+                <i class="bi bi-geo-alt"></i>
+                    <span>Municipios</span>
+                </a>
+            </li> 
+            
 
          
 

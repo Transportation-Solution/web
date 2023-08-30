@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Editar vehiculos</title>
+    <title>tipo de  carga</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- Theme Config Js -->
   <script src="{{ url('js/hyper-config.js')}}"></script>
@@ -29,10 +29,10 @@
 
             <div class="col-lg-12 margin-tb">
                 <div class="pull-left">
-                    <h2>Ingrese Tipo de carga</h2>
+                    <h2>Registre Tipo de carga</h2>
                 </div>
                 <div class="pull-right mb-2">
-                    <a class="btn btn-success" href="{{route('vehiculos.crear') }}"> Registrar Vehiculo</a>
+                    <a class="btn btn-success" href="{{route('tipo_cargas.create') }}">Crear tipo de carga</a>
 
                 </div>
             </div>
@@ -44,26 +44,27 @@
         @endif
         <table class="table table-bordered">
             <tr>
-                <th>id</th>
-                <th>Nombre</th>
-                <th>Placa</th>
-                <th>Marca</th>
-                <th>Modelo</th>
-                <th>Color</th>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Peso</th>
+                    <th>Tipo</th>
+                    <th>Valor flete</th>
+                    <th>Valor Seguro</th>
                 <th width="280px">Acción</th>
             </tr>
-            @foreach ($vehiculos as $vehiculo)
+            @foreach ($tipo_carga as $tipo_carga)
             <tr>    
                 <tbody>
-                    <td>{{$vehiculo->id}}</td>
-                    <td>{{$vehiculo->nombre}}</td>
-                    <td>{{$vehiculo->placa}}</td>
-                    <td>{{$vehiculo->marca}}</td>
-                    <td>{{$vehiculo->modelo}}</td>
-                    <td>{{$vehiculo->color}}</td>
+                    <td>{{$tipo_carga->id}}</td>
+                    <td>{{$tipo_carga->nombre}}</td>
+                    <td>{{$tipo_carga->peso}}</td>
+                    <td>{{$tipo_carga->tipo}}</td>
+                    <td>{{$tipo_carga->valor_flete}}</td>
+                    <td>{{$tipo_carga->valor_seguro}}</td>
                 </tbody>
-                <form action="{{route('vehiculos.eliminar',$vehiculo->id) }}" method="Post">
-                    <a class="btn btn-primary" href="{{ route('vehiculos.editar',$vehiculo->id) }}">Editar</a>
+                <form action="{{route('tipos_cargas.eliminar',$tipo_carga->id) }}" method="Post">
+                    <a class="btn btn-primary" href="{{ route('tipo_cargas.editar',$tipo_carga->id) }}">Editar</a>
+
                     @csrf
                     @method('DELETE')
                     <button type="submit" class="btn btn-danger">Eliminar</button>

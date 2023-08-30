@@ -20,8 +20,7 @@
         <!-- Icons css -->
         <link href="{{ url('css/icons.min.css')}}" rel="stylesheet" type="text/css" />
 </head>
-<div class="wrapper">
-        <!-- ========== Topbar Start ========== -->
+    <!-- ========== Topbar Start ========== -->
 @include('layouts.componets.navbar')
             <!-- ========== Topbar End ========== -->
             <!-- ========== Left Sidebar Start ========== -->
@@ -76,7 +75,6 @@
                     </div> <!-- container -->
                 </div> <!-- content -->
             </div>
-</div>
             <!-- Vendor js -->
 <script src="{{url('js/vendor.min.js')}}"></script>
 
