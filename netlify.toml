@@ -1,0 +1,4 @@
+[build]
+ command = "composer install"
+  base = "'/vendor/autoload.php'"
+  
