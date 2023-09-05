@@ -50,7 +50,13 @@
                                     <p class="text-muted mb-4">Digita tu correo y tu contraseña para tener accesso.</p>
                                 </div>
 
-                                <form action="{{route('login')}}" method="Post">
+                                @if (session('status'))
+                                    <div class="mb-4 font-medium text-sm text-green-600">
+                                        {{ session('status') }}
+                                    </div>
+                                @endif
+
+                                <form action="{{route('login')}}" method="POST">
                                     @csrf
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Correo electronico</label>
@@ -69,7 +75,6 @@
                                     <div class="mb-3 mb-0 text-center">
                                         <button class="btn btn-success"> Iniciar sesion </button>
                                     </div>
-
                                 </form>
                             </div> <!-- end card-body -->
                         </div>

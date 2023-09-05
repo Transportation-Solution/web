@@ -84,7 +84,7 @@
                     </a>
                     <form action="/" method="POST" id="form-logout">
                         @csrf
-                        <a href="{{ route('login') }}" class="dropdown-item" onclick="document.getElementById(form-logout).submit()">
+                        <a href="{{ route('logout') }}" class="dropdown-item" onclick="document.getElementById(form-logout).submit()">
                                 <i class="mdi mdi-logout me-1"></i>
                                 Cerrar sesion
                         </a>
