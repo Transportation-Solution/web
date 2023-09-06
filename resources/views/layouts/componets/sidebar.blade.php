@@ -130,7 +130,19 @@
             <li class="side-nav-item">
                 <a href="{{ route('registro_viajes') }}" class="side-nav-link">
                     <i class="uil-users-alt"></i>
-                    <span>Registre viajes</span>
+                    <span>Registro de viajes</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route('cotizacion_clientes') }}" class="side-nav-link">
+                    <i class="uil-users-alt"></i>
+                    <span>Cotizacion de clientes</span>
+                </a>
+            </li>
+            <li class="side-nav-item">
+                <a href="{{ route('orden_compras') }}" class="side-nav-link">
+                    <i class="uil-users-alt"></i>
+                    <span>Orden de Compra</span>
                 </a>
             </li>
 
