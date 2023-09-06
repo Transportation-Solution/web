@@ -29,7 +29,7 @@
 
                 <div class="col-lg-12 margin-tb">
                     <div class="pull-left">
-                        <h2>orden de compras</h2>
+                        <h2>Orden de compra</h2>
                     </div>
                     <div class="pull-right mb-2">
                         <a class="btn btn-success" href="{{ route('orden_compras.crear') }}"> Registrar Orden de
