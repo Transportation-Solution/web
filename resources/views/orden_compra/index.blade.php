@@ -54,7 +54,7 @@
                     <th>id_usuario</th>
                     <th width="280px">Acción</th>
                 </tr>
-                @foreach ($compras as $compra)
+                @foreach ($orden_compras as $orden_compra)
                     <tr>
                         <tbody>
                             <td>{{ $compra->id }}</td>
